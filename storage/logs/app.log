@@ -1,0 +1,3 @@
+2026-10-29T00:00:01Z STARTUP Express service initialized
+2026-10-29T00:05:12Z INFO Invoice batch processed count=14
+2026-10-29T00:09:44Z WARN Slow query threshold exceeded ms=412
