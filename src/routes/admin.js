@@ -10,7 +10,7 @@ function createAdminRouter(store) {
   });
 
   // Retrieve recent administrative audit trail entries
-  router.get("/audit-log", (_req, res) => {
+  router.get("/audit-log", requireAuth, requireAdmin, (_req, res) => {
     return res.json({ entries: store.getAuditLog() });
   });
 
