@@ -15,7 +15,7 @@ function createAdminRouter(store) {
   });
 
   // Mark an existing user account as inactive
-  router.post("/users/:id/deactivate", (req, res) => {
+  router.post("/users/:id/deactivate", requireAuth, requireAdmin, (req, res) => {
     const updated = store.deactivateUser(req.params.id);
     if (!updated) {
       return res.status(404).json({ error: "User not found" });
